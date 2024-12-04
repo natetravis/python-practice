@@ -97,7 +97,7 @@ if not usernames:
     print("We need to find some users")
     
     
-#Checking 
+#Checking username availability
 current_users = ["admin", "Eric", "Sophia", "James", "Liam"]
 
 new_users = ["Sophia", "Olivia", "Emma", "Noah", "Eric"]
@@ -108,3 +108,15 @@ for new_user in new_users:
     else:
         print(f"The username {new_user} is available")
     
+
+#Ordinal Numbers
+numbers = list(range(1, 10))   
+for number in numbers:
+    if number == 1:
+        print(f"{number}st")
+    elif number == 2:
+        print(f"{number}nd")
+    elif number == 3:
+        print(f"{number}rd")
+    else:
+        print(f"{number}th")
