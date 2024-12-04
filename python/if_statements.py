@@ -77,3 +77,34 @@ fruit = 'guavas'
 
 if fruit not in fruits:
     print(fruit.title() + " is not in stock")
+    
+    
+#Looping through usernames
+usernames = ["admin", "user1", "user2", "user3", "user4"]
+
+for username in usernames:
+    if username == 'admin':
+        print("Hello admin, would you like to see a status report")
+    else:
+        print("Hello" + username + " thank you for logging in,")
+
+#no users in the list
+usernames = ["admin", "user1", "user2", "user3", "user4"]
+
+usernames.clear()
+
+if not usernames:
+    print("We need to find some users")
+    
+    
+#Checking 
+current_users = ["admin", "Eric", "Sophia", "James", "Liam"]
+
+new_users = ["Sophia", "Olivia", "Emma", "Noah", "Eric"]
+
+for new_user in new_users:
+    if new_user.lower() in [user.lower() for user in current_users]:
+        print(f"Sorry the username {new_user} is already taken" )
+    else:
+        print(f"The username {new_user} is available")
+    
