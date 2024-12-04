@@ -42,3 +42,25 @@ print(cubes)
 #Cube Comprehension of the first ten cubes
 cubes = [value**3 for value in range(1, 10)]
 print(cubes)
+
+
+#copying a list
+my_food = ['pizza,', 'falafel', 'carrot cake', 'chicken', 'meat']
+friend_food = my_food[:]
+
+print("My favourite foods are " + my_food)
+print("\nMy freind's favourite foods are: " + friend_food)
+
+#copying select items using slice
+print(my_food[1:4])
+
+#using for loop to print the list
+print("my favourite food: ")
+for pizza in friend_food:
+    print(pizza)
+
+print("\nFriend's favourite food: ")    
+for food in my_food:
+    print(food)
+
+
