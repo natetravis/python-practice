@@ -56,6 +56,38 @@ while True:
     album = input("Album name: ")
     if album == 'q':
         break
+    track = input("Enter tracks: ")
+    if track == 'q':
+        break
+    album_name = make_album(artist, album, track)
+    print(album_name)
+print(make_album('kendrick lamar', 'gnx'))
+print(make_album('the off season', 'j.cole', 13))
+
+
+
+def show_magicians():
+    """display a list of magicians"""
+    for name in names:
+        print(f"{name.title()}")
     
-album_name = make_album(artist, album)
-print(album_name)
+names = ['dynamo', 'chirs angel', 'mikey']
+show_magicians()
+
+def make_great():
+    """adding the name Great to magicians names"""
+    for name in names:
+        print(f"Great{name.title()}")
+        
+names = ['dynamo', 'chirs angel', 'mikey']
+make_great()
+
+def sandwich_ingredients(*args):
+    """priniting sandwich ingredients"""
+    print("\nThese are sandwich ingredients")
+    for arg in args:
+        print(F"- {arg}")
+        
+    sandwich_ingredients()
+    sandwich_ingredients('Sliced white', 'whole wheat', 'rye', 'multigrain bread')
+    
