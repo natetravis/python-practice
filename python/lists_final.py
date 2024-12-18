@@ -119,24 +119,50 @@ nums = (1,2,3,4)
 nums = (4,5,6,7)
 
 #shopping list program
-
 shopping_list = []
 
-products = input("Enter items: ").split()
-for i in products:
-    shopping_list.append(i)
-    
-print("Items to be bought:")
-for item in shopping_list:
-    print(f" -{item}")
-    
-item_to_delete = input("Enter item to remove: ")
-if item_to_delete in shopping_list:
-    shopping_list.remove(item_to_delete)
-    print(f"    -{item_to_delete} has been removed from the list")
-else:
-    print(f"{item_to_delete} does not exist")
+def display_menu():
+    print("\nOptions:")
+    print("1. Add items")
+    print("2. View shopping list")
+    print("3. Remove an item")
+    print("4. Exit")
 
-print(f"Updated shopping list: ")
-for i in shopping_list:
-    print(f"-{i}")
+def add_items():
+    products = input("Enter items separated by spaces: ").split()
+    shopping_list.extend(products)
+    print("Items have been added to the shopping list.")
+
+def view_list():
+    if shopping_list:
+        print("Shopping list:")
+        print("\n".join(f"- {item}" for item in shopping_list))
+    else:
+        print("The shopping list is empty.")
+
+def remove_item():
+    if shopping_list:
+        item_to_delete = input("Enter an item to remove: ")
+        if item_to_delete in shopping_list:
+            shopping_list.remove(item_to_delete)
+            print(f"'{item_to_delete}' has been removed from the list.")
+        else:
+            print(f"'{item_to_delete}' does not exist in the shopping list.")
+    else:
+        print("The shopping list is empty. Nothing to remove.")
+
+while True:
+    display_menu()
+    choice = input("Enter your choice (1-4): ").strip()
+
+    if choice == "1":
+        add_items()
+    elif choice == "2":
+        view_list()
+    elif choice == "3":
+        remove_item()
+    elif choice == "4":
+        print("Exiting the program. Goodbye!")
+        break
+    else:
+        print("Invalid choice. Please enter a number between 1 and 4.")
