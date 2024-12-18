@@ -120,3 +120,33 @@ process_order(original_orders, completed_orders)
 
 print("\nOriginal orders list remains unchanged:")
 print(original_orders)
+
+#arbitrary arguments
+def make_pizza(*toppings):
+    print(f"Available toppings: ")
+    for topping in toppings:
+        print(topping)
+
+make_pizza('cheese', 'mushrooms', 'green peppers', 'peperoni')
+
+#mixing positional and arbitrary arguments
+def make_pizza(size, *toppings):
+    print(f"making a {size} inch pizza with the following toppings: ")
+    for topping in toppings:
+        print(topping)
+
+make_pizza(7, 'cheese', 'mushrooms', 'green peppers', 'peperoni')
+
+
+#using arbitrary and keyword arguments
+def build_profile(first, last, **user_info):
+    person = {
+        "first_name": first,
+        "last_name": last,
+        "age": 25,
+        "location": 'east kwa maBeast',
+        "job": 'software eng',
+    }
+    return person
+name = build_profile('top', 'dawg')
+print(name)
