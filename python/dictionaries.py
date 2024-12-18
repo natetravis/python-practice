@@ -32,11 +32,11 @@ for word, meaning in definitions.items():
 #more looping examples with dictionaries
 rivers = {'nile': 'egypt', 'amazon': 'brazil', 'mississipi': 'usa'}
 
-for river, country in rivers:
+for river, country in rivers.items():
     print(f"\nThe {river.title()} runs through {country.title()}")
     
 #print each river
-for river in rivers.values():
+for river in rivers.keys():
     print(f"River: {river.title()}")
     
 #print each country
