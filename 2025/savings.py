@@ -13,8 +13,8 @@ def calculate_donation():
     # Update the labels with today's details
     date_label.config(text=f"Today's Date: {today}")
     day_label.config(text=f"Day of the Year: {day_of_year}")
-    donation_label.config(text=f"Donation for Today: ${donation_today}")
-    total_label.config(text=f"Total Saved So Far: ${total_saved}")
+    donation_label.config(text=f"Donation for Today: Ksh {donation_today}")
+    total_label.config(text=f"Total Saved So Far: KSh {total_saved}")
 
 #main application window
 root = tk.Tk()
